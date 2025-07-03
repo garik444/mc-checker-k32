@@ -1,0 +1,20 @@
+<body>
+  <div class="container">
+    <h1>MC Number Checker</h1>
+    <input type="text" id="mcInput" placeholder="Enter 6-digit MC number" maxlength="6">
+    <button onclick="checkMC()">Check</button>
+    <div id="resultBox" class="hidden">
+      <p><strong>MC Number:</strong> <span id="mcNumber"></span></p>
+      <p><strong>Trucks:</strong> <span id="truckCount"></span></p>
+      <p><strong>Drivers:</strong> <span id="driverCount"></span></p>
+      <p><strong>Inspections:</strong> <span id="inspectionCount"></span></p>
+    </div>
+  </div>
+
+  <!-- Right-side truck image -->
+  <div class="right-truck">
+    <img src="right-truck.webp" alt="Truck on right side">
+  </div>
+
+  <script src="script.js"></script>
+</body>
