@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-image: url('background.jpg');
+  background-image: url('background.jpg'); /* your uploaded image */
   background-size: cover;
   background-position: center;
   color: white;
@@ -58,7 +58,6 @@ button:hover {
   display: none;
 }
 
-/* Right-side truck image */
 .side-image {
   position: absolute;
   right: 0;
