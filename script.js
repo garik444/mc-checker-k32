@@ -12,8 +12,8 @@ function checkMC() {
   }
 
   const trucks = Math.floor(Math.random() * 50) + 1;
-  const drivers = Math.floor(Math.random() * (trucks + 1)); // drivers ≤ trucks
-  const inspections = Math.floor(Math.random() * 20) + 1;
+  const drivers = Math.floor(Math.random() * trucks) + 1; // ≤ trucks
+  const inspections = Math.floor(Math.random() * 10) + 1;
 
   mcNumber.textContent = mcInput;
   truckCount.textContent = trucks;
