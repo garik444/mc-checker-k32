@@ -12,8 +12,8 @@ function checkMC() {
   }
 
   const trucks = Math.floor(Math.random() * 50) + 1;
-  const drivers = Math.floor(Math.random() * trucks) + 1;
-  const inspections = Math.floor(Math.random() * 100) + 1;
+  const drivers = Math.floor(Math.random() * (trucks + 1)); // drivers ≤ trucks
+  const inspections = Math.floor(Math.random() * 20) + 1;
 
   mcNumber.textContent = mcInput;
   truckCount.textContent = trucks;
@@ -22,4 +22,3 @@ function checkMC() {
 
   resultBox.classList.remove("hidden");
 }
-
