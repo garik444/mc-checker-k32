@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  background-color: red;
+  background: rgba(0, 0, 0, 0.6);
   padding: 30px;
   border-radius: 10px;
   text-align: center;
@@ -68,8 +68,3 @@ button:hover {
   z-index: 1;
   opacity: 0.8;
 }
-
-body{
-  color:red;}
-
-
