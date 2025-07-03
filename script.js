@@ -22,3 +22,4 @@ function checkMC() {
 
   resultBox.classList.remove("hidden");
 }
+
