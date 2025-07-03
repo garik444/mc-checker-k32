@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>MC Number Checker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>MC Number Checker</h1>
-    <input type="text" id="mcInput" placeholder="Enter 6-digit MC number" maxlength="6">
+    <input type="text" id="mcInput" placeholder="Enter 6-digit MC number">
     <button onclick="checkMC()">Check</button>
-    <div id="resultBox" class="hidden">
-      <p><strong>MC Number:</strong> <span id="mcNumber"></span></p>
-      <p><strong>Trucks:</strong> <span id="truckCount"></span></p>
-      <p><strong>Drivers:</strong> <span id="driverCount"></span></p>
-      <p><strong>Inspections:</strong> <span id="inspectionCount"></span></p>
-    </div>
+    <div id="resultBox" class="hidden"></div>
   </div>
 
+  <!-- Right-side truck image -->
   <img src="right-truck.webp" class="side-image" alt="Truck Image">
-  <script src="script.js"></script>
+
+  <script>
+    function checkMC() {
+      const input = document.getElementById('mcInput').value;
+      const resultBox = document.getElementById('resultBox');
+
+      if (!/^\d{6}$/.test(input)) {
+        resultBox.textContent = "Please enter a valid 6-digit MC number.";
+        resultBox.classList.remove('hidden');
+        return;
+      }
+
+      const trucks = Math.floor(Math.random() * 20) + 1;
+      const drivers = Math.floor(Math.random() * (trucks + 1));
+      const inspections = Math.floor(Math.random() * 10) + 1;
+
+      resultBox.innerHTML = `
+        <p><strong>MC Number:</strong> ${input}</p>
+        <p><strong>Trucks:</strong> ${trucks}</p>
+        <p><strong>Drivers:</strong> ${drivers}</p>
+        <p><strong>Inspections:</strong> ${inspections}</p>
+      `;
+      resultBox.classList.remove('hidden');
+    }
+  </script>
 </body>
 </html>
+
